@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_floating/floating_icon.dart';
-
 import 'button_widget.dart';
 import 'floating/assist/floating_slide_type.dart';
 import 'floating/floating.dart';
-import 'floating/listener/floating_listener.dart';
 import 'floating/manager/floating_manager.dart';
 import 'floating_increment.dart';
 import 'page.dart';

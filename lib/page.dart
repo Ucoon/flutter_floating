@@ -5,7 +5,6 @@ import 'package:flutter_floating/floating/manager/floating_manager.dart';
 import 'floating/assist/floating_slide_type.dart';
 import 'floating/floating.dart';
 import 'floating_increment.dart';
-import 'main.dart';
 
 /// @name：page
 /// @package：
@@ -41,16 +40,14 @@ class _CustomPageState extends State<CustomPage> {
       appBar: AppBar(
         title: const Text("功能页面"),
       ),
-      body: Container(
-        child: GestureDetector(
-          child: const Text(
-            "关闭悬浮窗",
-            style: TextStyle(fontSize: 30),
-          ),
-          onTap: () {
-            floatingManager.getFloating("1").close();
-          },
+      body: GestureDetector(
+        child: const Text(
+          "关闭悬浮窗",
+          style: TextStyle(fontSize: 30),
         ),
+        onTap: () {
+          floatingManager.getFloating("1").close();
+        },
       ),
     );
   }

@@ -42,6 +42,7 @@ build/
 .android/
 .flutter-plugins
 .flutter-plugins-dependencies
+.fvm/
 
 # Symbolication related
 app.*.symbols

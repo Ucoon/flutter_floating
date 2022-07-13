@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 /// @name：log
 /// @package：
@@ -45,7 +45,7 @@ class FloatingLog {
   }
 
   void _log(String msg) {
-    print("$_title $logKey ： $msg");
+    debugPrint("$_title $logKey ： $msg");
   }
 
   void _splitLog(String msg) {
@@ -54,12 +54,12 @@ class FloatingLog {
     for (var index = 0; index < msg.length; index++) {
       outStr.write(msg[index]);
       if (index % _limitLength == 0 && index != 0) {
-        print(outStr);
+        debugPrint(outStr.toString());
         outStr.clear();
         var lastIndex = index + 1;
         if (msg.length - lastIndex < _limitLength) {
           var remainderStr = msg.substring(lastIndex, msg.length);
-          print(remainderStr);
+          debugPrint(remainderStr);
           break;
         }
       }
